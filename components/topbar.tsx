@@ -1,4 +1,4 @@
-import { CalendarSearch, Menu } from "lucide-react"
+import { CalendarSearch, Menu, House } from "lucide-react"
 import Link from "next/link"
 import AccountButton from "./pfp-drop-menu"
 
@@ -8,7 +8,7 @@ type props = {
 
 const TopBar = ({toggleMenu} : props) => {
     return (
-        <div className="md:absolute top-0 right-0 w-full flex justify-between md:justify-end gap-2 box-border p-2">
+        <div className="md:absolute top-0 right-0 w-full md:w-fit flex justify-between md:justify-end gap-2 box-border p-2">
             <button
                 onClick={() => toggleMenu(true)}
                 className="aspect-square w-12 duration-200 rounded-full md:hidden flex justify-center items-center">
@@ -18,6 +18,10 @@ const TopBar = ({toggleMenu} : props) => {
                 <Link href="/main/search"
                       className="aspect-square w-12 border hover:text-background hover:border-none hover:bg-foreground duration-200 rounded-full flex justify-center items-center">
                     <CalendarSearch/> 
+                </Link>
+                <Link href="/main/home"
+                      className="aspect-square w-12 border hover:text-background hover:border-none hover:bg-foreground duration-200 rounded-full flex justify-center items-center">
+                    <House/> 
                 </Link>
                 <AccountButton/>
             </div>

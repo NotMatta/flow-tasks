@@ -11,7 +11,7 @@ const Layout = ({children}:  {children:React.ReactNode}) => {
         <div className="relative w-full h-full flex flex-col md:flex-row">
             <ListMenu show={showLists} setShow={setShowLists}/>
             <TopBar toggleMenu={setShowLists}/>
-            <div className="w-full h-full md:w-5/6 border">
+            <div className="w-full h-full md:w-5/6 border-l">
                 {children}
             </div>
         </div>
